@@ -12,6 +12,10 @@ module.exports = {
         btnPrimary: '#FE3838',
         btnSecondary: '#FE383833'
       },
+      screens: {
+        'sm': '400px',
+        'md': '1330px'
+      }
     },
   },
   plugins: [],
