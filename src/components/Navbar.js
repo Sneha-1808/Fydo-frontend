@@ -10,7 +10,7 @@ const Navbar = () => {
     setOpen((prev) => !prev);
   };
   return (
-    <div className="relative w-full md:h-[72px] h-[60px] bg-[#0B0D17] md:mx-20 px-4 py-2 md:py-4"  >
+    <div className="relative w-full md:h-[72px] h-[60px] bg-[#0B0D17]  px-4 py-2 md:px-8"  >
     <div className='w-full py-2 flex justify-between mx-auto items-center  top-0'>
       {/* //Logo */}
       <div><img className='w-[125px] md:w-[229px]' src={Logo}/></div> 

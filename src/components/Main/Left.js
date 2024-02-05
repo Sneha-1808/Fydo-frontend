@@ -15,7 +15,10 @@ const Left = () => {
         <img src={Banner}/>
         </div>
 
-        <Right/>
+        <div className='md:hidden'>
+        <Right />
+        </div>
+        
 
         {/* Details------- */}
         <p className=" flex flex-col gap-2 font-inter text-left text-[#222222]">
