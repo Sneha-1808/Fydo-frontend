@@ -131,7 +131,7 @@ const Right = () => {
 
         {isCheckoutVisible && (
         <div className="fixed top-0 left-0 w-full sm:max-h-screen h-full flex items-center justify-center bg-black bg-opacity-60 overflow-y-auto transition-opacity duration-300 ease-in-out " onClick={handleCloseCheckout}>
-        <div className=" z-1 bg-white p-4 rounded-xl transition-opacity duration-300 ease-in-out shadow-lg m-4 max-h-screen mt-[145px] md:mt-0 overflow-y-auto" onClick={handleCheckoutClick}>
+        <div className=" z-1 bg-white p-4 rounded-xl transition-opacity duration-300 ease-in-out shadow-lg m-4 max-h-screen mt-[209px] mb-8 md:mt-0 overflow-y-auto" onClick={handleCheckoutClick}>
           <Checkout  />
           </div>
         </div>
