@@ -7,12 +7,12 @@ import Right from './Right';
 
 const Main = () => {
   return (
-    <div className="min-h-full min-w-screen px-[80px] py-[40px] flex gap-10 lg:flex-row sm:flex-col">
-      <div className="flex-1 lg:w-64 h-32 flex-col gap-8 sm:w-full ">
+    <div className="w-full h-full md:px-[80px] md:py-[40px] flex gap-10 md:flex-row sm:flex-col sm:p-4 ">
+      <div className=" flex lg:w-[811px] md:w-[512px] flex-col gap-8 sm:w-full ">
         <Left/>
 
       </div>
-      <div className="flex lg:w-[437px] sm:w-full">
+      <div className=" flex  lg:w-[437px] md:w-[330px] sm:w-full hidden md:block">
         <Right/>
       </div>
       

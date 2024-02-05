@@ -13,8 +13,9 @@ module.exports = {
         btnSecondary: '#FE383833'
       },
       screens: {
-        'sm': '400px',
-        'md': '1330px'
+        'sm': '300px',
+        'md': '768px',
+        'lg': '1109px'
       }
     },
   },

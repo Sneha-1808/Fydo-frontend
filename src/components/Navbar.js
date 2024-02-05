@@ -3,16 +3,17 @@ import Logo from '../logo.svg'
 import DropBar from '../dropbar.svg'
 
 const Navbar = () => {
+  const screenWidth = window.innerWidth;
   const [isOpen, setOpen] = useState(false);
 
   const toggleNavbar = () => {
     setOpen((prev) => !prev);
   };
   return (
-    <div className="relative w-full h-[72px] bg-[#0B0D17] px-20  "  >
-    <div className='w-1440 h-[72px] py-2 flex justify-between mx-auto items-center  top-0'>
+    <div className="relative w-full md:h-[72px] h-[60px] bg-[#0B0D17] md:mx-20 px-4 py-2 md:py-4"  >
+    <div className='w-full py-2 flex justify-between mx-auto items-center  top-0'>
       {/* //Logo */}
-      <div><img src={Logo}/></div> 
+      <div><img className='w-[125px] md:w-[229px]' src={Logo}/></div> 
 
       {/* menu for small device */}
       <div className="block lg:hidden">
@@ -23,32 +24,30 @@ const Navbar = () => {
             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
             
-              {/* {isOpen ? (
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M4 5h16a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2zm16 4H4a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2zm0 6H4a1 1 0 1 1 0-2h16a1 1 0 1 1 0 2z"
-                />
-              ) : (
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 1 0 0-2H4a1 1 0 0 0 0 2zm0 6h16a1 1 0 1 1 0 2H4a1 1 0 0 1 0-2z"
-                /> */}
-              {/* )} */}
             </svg>
           </button>
         </div>
 
     {/* OPtions   */}
-      <div className={`lg:flex  text-[white] space-x-8 ${isOpen ? 'block' : 'hidden'}`}>
-        <p className=' flex gap-2'>Browsing events in 
-        <span className='flex gap-2'>
+      <div className={`lg:flex  text-[white] space-x-8 text-sm  ${isOpen ? 'block' : 'hidden'}`}>
+        <p className=' flex gap-2'>
+        <span className='hidden lg:block'>Browsing events in</span> 
+        {screenWidth >= 1109 ?
+          (<span className='flex gap-2'>
         <img src={DropBar}/>
         <p className="text-red-500 underline-white font-semibold">
         Bhubaneshwar 
         </p>
-        </span>
+        </span>) :
+        (<span className='flex gap-2'>
+        
+        <p className="text-red-500 underline-white font-semibold">
+        Bhubaneshwar 
+        </p>
+        <img src={DropBar}/>
+        </span>)
+        }
+        
         </p>
         <p>Contact Us</p>
         <p>FAQs</p>

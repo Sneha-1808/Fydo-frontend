@@ -44,9 +44,9 @@ const Right = () => {
     e.stopPropagation();
   };
   return (
-    <div className={`flex flex-col gap-4 text-inter ${isCheckoutVisible? 'overflow-hidden':''}`}>
+    <div className={`flex flex-col gap-4 text-inter ${isCheckoutVisible? 'overflow-y-auto' : 'overflow-y-hidden' }`}>
         <div className='flex flex-col right-div top gap-4'>
-            <p className='text-4xl font-bold'>Casa Bacardi on Tour Ft. KING |<br/> Bhubaneswar</p> 
+            <p className='lg:text-4xl md:text-3xl font-bold'>Casa Bacardi on Tour Ft. KING |<br/> Bhubaneswar</p> 
             <div className="border-b border-gray-200  mx-2"></div>
             <div className="grid grid-cols-2 gap-4 mb-2">
       {data.map((item, index) => (
@@ -56,7 +56,20 @@ const Right = () => {
     <p className='text-secondary text-sm line-height-22 tracking-wider'>#BHUBANESWAR are you ready for the BIGGEST PARTY IN TOWN?Bacardi Experiences brings #CasaBacardiOnTour back to Bhubaneswar, this January! If Maan Meri Jaan moves you, #ItsAMood! Experience <b>KING</b> perform Live for you at Dream City Resort on the 13th of January, 2024.
         Get your tickets NOW!</p>
         
-        <button className="bg-btnPrimary flex gap-8 px-6 py-2 rounded-3xl bg-cover w-full text-white justify-between items-center" onClick={handleGetTicket} style={buttonStyle}>
+        {/* for small screen */}
+        <button className="bg-btnPrimary fixed bottom-0 left-0 w-full flex gap-8 px-4 py-2 bg-cover w-full text-white justify-between items-center block md:hidden z-20" onClick={handleGetTicket} style={buttonStyle}>
+        <div className='flex flex-col items-start justify-start'>
+            <p className='text-sm font-semibold text-[#FFA9A9] '>STARTING FROM</p>
+            <p className='text-2xl font-medium'>₹699/-</p>
+        </div>
+        <div className='flex gap-2 items-center'>
+            <p className='text-white font-500'> Get Tickets</p>
+            <img src={rightArrow}/>
+        </div>
+</button>
+
+{/* for large sreen */}
+<button className="bg-btnPrimary  flex gap-8 px-6 py-2 rounded-3xl bg-cover w-full text-white justify-between items-center  sm:hidden md:block" onClick={handleGetTicket} style={buttonStyle}>
         <div className='flex flex-col items-start justify-start'>
             <p className='text-sm font-semibold text-[#FFA9A9] '>STARTING FROM</p>
             <p className='text-4xl font-medium'>₹699/-</p>
@@ -107,7 +120,7 @@ const Right = () => {
 
 
         <div className='right-div flex justify-between items-center'>
-         <p className='font-semibold text-md'>Share this Event -&gt;</p>
+         <p className='font-semibold md:text-md text:xs'>Share this Event -&gt;</p>
          <div className='flex gap-2'>
             <img src={twitter}/>
             <img src={instagram}/>
@@ -117,8 +130,8 @@ const Right = () => {
         </div>
 
         {isCheckoutVisible && (
-        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-60 overflow-hidden transition-opacity duration-300 ease-in-out rounded-md" onClick={handleCloseCheckout}>
-        <div className=" z-1 bg-white p-4 rounded-xl transition-opacity duration-300 ease-in-out shadow-lg" onClick={handleCheckoutClick}>
+        <div className="fixed top-2 left-0 w-full lg:h-max-screen h-full flex items-center justify-center bg-black bg-opacity-60 overflow-y-auto transition-opacity duration-300 ease-in-out " onClick={handleCloseCheckout}>
+        <div className=" z-1 bg-white p-4 rounded-xl transition-opacity duration-300 ease-in-out shadow-lg m-4" onClick={handleCheckoutClick}>
           <Checkout  />
           </div>
         </div>
