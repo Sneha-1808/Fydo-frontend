@@ -9,7 +9,7 @@ import Right from './Right'
 const Checkout = () => {
     
   return (
-    <div className=" lg:w-[900px] flex-row max-h-auto sm:flex-col md:flex-row mx-auto overflow-y-auto p-4 md:p-6 rounded-xl bg-white transition-opacity duration-300 ease-in-out overflow-y-auto ">
+    <div className=" lg:w-[900px] flex-row max-h-auto sm:flex-col md:flex-row mx-auto overflow-y-auto p-2 md:p-6 rounded-xl bg-white transition-opacity duration-300 ease-in-out overflow-y-auto ">
        {/* FOr mobile screen */}
        <div className="flex flex-col gap-4 items-left justify-center md:hidden">
             <div className='flex gap-2 '>
@@ -32,7 +32,7 @@ const Checkout = () => {
             </div>
             </div> 
         <div className='flex md:flex-row flex-col md:gap-8'>
-        <div className="flex lg:w-[524px] sm:w-full ">
+        <div className="flex lg:w-[524px] w-full ">
         <Left />
       </div>
       <div className="h-[550px] border-l border-gray-200 mt-32 hidden  "></div>

@@ -2,7 +2,7 @@ import Counter from "./Counter";
 
 const Ticket = () => {
     return (
-        <div className="right-div flex flex-col items-start w-full  gap-4 text-inter">
+        <div className="right-div flex flex-col items-start w-full gap-4 text-inter">
            <div className="flex flex-col items-start">
            <p className="font-bold text-lg">General Admission</p>
            <p className="text-secondary text-sm md:text-md text-left md:text-center">This ticket grants entry to one individual to the event.</p>
