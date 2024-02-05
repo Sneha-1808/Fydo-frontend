@@ -16,14 +16,14 @@ const Counter = () => {
   return (
     <div className="flex items-center space-x-4">
       <button
-        className="bg-[#F2F4F7] w-[32px] h-[32px] text-black px-3 py-1 rounded-[8px] text-[#000]"
+        className="bg-[#F2F4F7] md:w-[32px] md:h-[32px] w-[25px] h-[25px] text-black px-3 py-1 rounded-[5px] text-[#000] items-center flex justify-center"
         onClick={decrement}
       >
         -
       </button>
       <span className="text-lg font-bold">{count}</span>
       <button
-        className="bg-btnPrimary  w-[32px] h-[32px] text-white px-3 py-1 rounded-[8px]"
+        className="bg-btnPrimary  md:w-[32px] md:h-[32px] w-[25px] h-[25px] text-white px-3 py-1 rounded-[5px] items-center flex justify-center"
         onClick={increment}
       >
         +

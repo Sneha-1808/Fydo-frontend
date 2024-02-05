@@ -11,9 +11,8 @@ const Right= () => {
         setShowDiscount((prev) => !prev); // Toggle the visibility state
       };
     return (
-        <div className='flex flex-col gap-8 sm:gap-4 ' >
+        <div className='flex flex-col gap-8 sm:gap-4 w-full ' >
         <div className='flex flex-col gap-4 sm:gap-2'>
-        <img className="w-full" src={banner}/>
         <p className='text-xl font-semibold '>Order Summary</p>
         <div className='flex flex-col gap-2'>
         <div className='flex justify-between text-secondary text-sm'>

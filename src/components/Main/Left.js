@@ -40,7 +40,7 @@ const Left = () => {
         <ul className='text-[#475467] text-l list-disc ml-4'>
             <li>By accepting, holding or using a ticket, you acknowledge that you have read, understood, accepted and agreed to the full terms and conditions.</li>
             <li>The organizer reserves the right to alter the schedule of the event without prior intimation.</li>
-            <p className='cursor-pointer text-btnPrimary' onClick={toggleReadMore}>{showFullText ? '' : 'Read More'}</p>
+            <p className='cursor-pointer text-btnPrimary md:hidden' onClick={toggleReadMore}>{showFullText ? '' : 'Read More'}</p>
             {showFullText && <ul className='list-disc md:hidden'>
             <li>The organizer, the venue and the ticketing company shall not be liable for any difficulties caused by an unauthorized copy or reproduction of this ticket and reserves the right to refuse entry to such ticket holders.</li> 
             <li>No refund on a purchased ticket is possible, even in case of any rescheduling, unforeseen circumstances or force majeure conditions.</li>

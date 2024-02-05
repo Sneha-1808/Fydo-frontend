@@ -44,7 +44,7 @@ const Right = () => {
     e.stopPropagation();
   };
   return (
-    <div className={`flex flex-col gap-4 text-inter ${isCheckoutVisible? 'overflow-y-auto' : 'overflow-y-hidden' }`}>
+    <div className={`flex flex-col text-inter ${isCheckoutVisible? 'overflow-y-hidden' : 'overflow-y-hidden' }`}>
         <div className='flex flex-col right-div top gap-4'>
             <p className='lg:text-4xl md:text-3xl font-bold'>Casa Bacardi on Tour Ft. KING |<br/> Bhubaneswar</p> 
             <div className="border-b border-gray-200  mx-2"></div>
@@ -57,7 +57,7 @@ const Right = () => {
         Get your tickets NOW!</p>
         
         {/* for small screen */}
-        <button className="bg-btnPrimary fixed bottom-0 left-0 w-full flex gap-8 px-4 py-2 bg-cover w-full text-white justify-between items-center block md:hidden z-20" onClick={handleGetTicket} style={buttonStyle}>
+        {!isCheckoutVisible && <button className="bg-btnPrimary fixed bottom-0 left-0 w-full flex gap-8 px-4 py-2 bg-cover w-full text-white justify-between items-center block md:hidden z-20" onClick={handleGetTicket} style={buttonStyle}>
         <div className='flex flex-col items-start justify-start'>
             <p className='text-sm font-semibold text-[#FFA9A9] '>STARTING FROM</p>
             <p className='text-2xl font-medium'>₹699/-</p>
@@ -66,7 +66,7 @@ const Right = () => {
             <p className='text-white font-500'> Get Tickets</p>
             <img src={rightArrow}/>
         </div>
-</button>
+</button>}
 
 {/* for large sreen */}
 <button className="bg-btnPrimary flex px-6 py-2 rounded-3xl bg-cover w-full text-white justify-between items-center hidden md:flex" onClick={handleGetTicket} style={buttonStyle}>
@@ -130,8 +130,8 @@ const Right = () => {
         </div>
 
         {isCheckoutVisible && (
-        <div className="fixed top-2 left-0 w-full lg:h-max-screen h-full flex items-center justify-center bg-black bg-opacity-60 overflow-y-auto transition-opacity duration-300 ease-in-out " onClick={handleCloseCheckout}>
-        <div className=" z-1 bg-white p-4 rounded-xl transition-opacity duration-300 ease-in-out shadow-lg m-4" onClick={handleCheckoutClick}>
+        <div className="fixed top-0 left-0 w-full sm:max-h-screen h-full flex items-center justify-center bg-black bg-opacity-60 overflow-y-auto transition-opacity duration-300 ease-in-out " onClick={handleCloseCheckout}>
+        <div className=" z-1 bg-white p-4 rounded-xl transition-opacity duration-300 ease-in-out shadow-lg m-4 max-h-screen mt-[145px] md:mt-0 overflow-y-auto" onClick={handleCheckoutClick}>
           <Checkout  />
           </div>
         </div>
