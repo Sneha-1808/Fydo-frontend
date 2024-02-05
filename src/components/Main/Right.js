@@ -69,7 +69,7 @@ const Right = () => {
 </button>
 
 {/* for large sreen */}
-<button className="bg-btnPrimary  flex gap-8 px-6 py-2 rounded-3xl bg-cover w-full text-white justify-between items-center  sm:hidden md:block" onClick={handleGetTicket} style={buttonStyle}>
+<button className="bg-btnPrimary flex px-6 py-2 rounded-3xl bg-cover w-full text-white justify-between items-center hidden md:flex" onClick={handleGetTicket} style={buttonStyle}>
         <div className='flex flex-col items-start justify-start'>
             <p className='text-sm font-semibold text-[#FFA9A9] '>STARTING FROM</p>
             <p className='text-4xl font-medium'>₹699/-</p>
