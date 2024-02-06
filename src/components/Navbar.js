@@ -29,7 +29,7 @@ const Navbar = () => {
         </div>
 
     {/* OPtions   */}
-      <div className={`lg:flex  text-[white] space-x-8 text-sm  ${isOpen ? 'block' : 'hidden'}`}>
+      <div className={`lg:flex hidden text-[white] space-x-8 text-sm  `}>
         <p className=' flex gap-2'>
         <span className='hidden lg:block'>Browsing events in</span> 
         {screenWidth >= 1109 ?
@@ -55,7 +55,7 @@ const Navbar = () => {
       </div>
 
       {/* Button */}
-      <div className={`lg:flex space-x-2 mx-6  ${isOpen ? 'block' : 'hidden'}`}>
+      <div className={`lg:flex space-x-2 mx-6 hidden  ${isOpen ? 'block' : 'hidden'}`}>
          <div>
           <button className="w-[141px] h-[40px] rounded-md p-[10px 20px] gap-10 bg-[#FE3838] text-white">
             List Your Event
@@ -69,6 +69,16 @@ const Navbar = () => {
          </div>
       </div>
     </div>
+    {isOpen && <div className='absolute w-full left-0 p-4 m-0 flex flex-col bg-[#0B0D17] text-white gap-2 z-2'>
+    <p>Contact US</p>
+    <p>FAQs</p>
+    <button className="w-[130px] h-[35px] rounded-md p-[10px 20px] gap-10 bg-[#FE3838] text-white mx-auto">
+            List Your Event
+          </button>
+          <button className="w-[70px] h-[33px] rounded-md p-[10px 20px] gap-10 bg-[#FE383833] text-white mx-auto">
+            Login
+          </button>
+    </div>}
     </div>
 
   );

@@ -44,9 +44,9 @@ const Right = () => {
     e.stopPropagation();
   };
   return (
-    <div className={`flex flex-col text-inter ${isCheckoutVisible? 'overflow-y-hidden' : 'overflow-y-hidden' }`}>
+    <div className={`flex flex-col text-inter gap-4 ${isCheckoutVisible? 'overflow-y-hidden' : 'overflow-y-hidden' }`}>
         <div className='flex flex-col right-div top gap-4'>
-            <p className='lg:text-4xl md:text-3xl font-bold'>Casa Bacardi on Tour Ft. KING |<br/> Bhubaneswar</p> 
+            <p className=' md:text-3xl text-2xl font-bold'>Casa Bacardi on Tour Ft. KING |<br/> Bhubaneswar</p> 
             <div className="border-b border-gray-200  mx-2"></div>
             <div className="grid grid-cols-2 gap-4 mb-2">
       {data.map((item, index) => (
@@ -72,7 +72,7 @@ const Right = () => {
 <button className="bg-btnPrimary flex px-6 py-2 rounded-3xl bg-cover w-full text-white justify-between items-center hidden md:flex" onClick={handleGetTicket} style={buttonStyle}>
         <div className='flex flex-col items-start justify-start'>
             <p className='text-sm font-semibold text-[#FFA9A9] '>STARTING FROM</p>
-            <p className='text-4xl font-medium'>₹699/-</p>
+            <p className='text-3xl font-medium'>₹699/-</p>
         </div>
         <div className='flex gap-2 items-center'>
             <p className='text-white font-500'> Get Tickets</p>
@@ -131,11 +131,22 @@ const Right = () => {
 
         {isCheckoutVisible && (
         <div className="fixed top-0 left-0 w-full sm:max-h-screen h-full flex items-center justify-center bg-black bg-opacity-60 overflow-y-auto transition-opacity duration-300 ease-in-out " onClick={handleCloseCheckout}>
-        <div className=" z-1 bg-white p-4 rounded-xl transition-opacity duration-300 ease-in-out shadow-lg m-4 max-h-screen mt-[209px] mb-8 md:mt-0 overflow-y-auto" onClick={handleCheckoutClick}>
+        {/* Close bar  */}
+        
+        
+        <div className="relative top-24 md:top-6 bottom-2 z-1 bg-white p-4 pt-6 rounded-xl transition-opacity duration-300 ease-in-out shadow-lg m-4 max-h-screen mb-8 md:mt-0 overflow-y-auto" onClick={handleCheckoutClick}>
+        <button className=" absolute fixed top-[0] right-0 p-1 bg-red-500 text-white w-8 h-8 rounded-full z-60" onClick={(e)=> setCheckoutVisible(false) }>
+    X
+  </button>
           <Checkout  />
           </div>
         </div>
       )}
+
+      {isCheckoutVisible && 
+      (<div className='' >
+        
+      </div>)}
       
 
         

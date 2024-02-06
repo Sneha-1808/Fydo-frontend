@@ -30,7 +30,9 @@ const Checkout = () => {
             <div className='flex flex-1 items-center justify-center'>
             <img className="w-[309px] h-[167px] hidden md:flex rounded-xl "src={Banner}/>
             </div>
-            </div> 
+            </div>
+
+            
         <div className='flex md:flex-row flex-col md:gap-8'>
         <div className="flex lg:w-[524px] w-full ">
         <Left />
